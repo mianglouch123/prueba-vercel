@@ -52,6 +52,9 @@ const Calculator = new mongoose.Schema(
 
 const Calculate = new mongoose.model('calculator',Calculator);
 
+app.get('/', (req,res)=>{
+  res.send("hello world");
+})
 
 app.post('/calculate',(req,res)=>{
     
