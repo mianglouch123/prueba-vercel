@@ -11,7 +11,8 @@ app.get('/calculate',(req,res)=>{
   const firstValue = req.query.f;
   const secondValue = req.query.s;
 
-  res.send(`values` + firstValue + "" + secondValue);
+  res.send(`values` + firstValue + "and" + secondValue);
+  
 })
 
 app.listen(port, () => {
