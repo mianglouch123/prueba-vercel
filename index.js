@@ -53,7 +53,16 @@ const Calculator = new mongoose.Schema(
 const Calculate = new mongoose.model('calculator',Calculator);
 
 app.get('/', (req,res)=>{
+  
   res.send("hello world");
+})
+
+app.get('/calculate', (req,res)=>{
+  let firstValue = req.query.f;
+  let secondValue = req.query.s;
+
+  
+  res.send("your values " + firstValue + "and " + secondValue);
 })
 
 app.post('/calculate',(req,res)=>{
