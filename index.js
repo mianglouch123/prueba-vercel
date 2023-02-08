@@ -53,7 +53,7 @@ const Calculator = new mongoose.Schema(
 const Calculate = new mongoose.model('calculator',Calculator);
 
 
-app.post('/',(req,res)=>{
+app.post('/calculate',(req,res)=>{
     
       const {firstValue,secondValue,operation} = req.body;
       
